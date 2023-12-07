@@ -1,0 +1,58 @@
+<div class="main">
+
+    <div class="pantalla" routerLink="/proyects" *ngIf="proy == undefined">
+
+        <h1> Mis proyectos </h1>
+
+        <div class="para-boton-izquierda">
+
+            <button (click)="volver()" class="button"> <i class='bx bxs-left-arrow'></i> </button>
+
+            <div class="cuadrados-proyectos">
+
+                <div *ngFor="let proy of proyects" (click)="actual(proy)">
+                    <h2 class="titulo-cuadrado"> {{proy.titulo}} </h2>
+                    <img src="{{proy.imagen}}" alt="" class="cuadrado" *ngIf="proy.titulo != 'Proximamente'">
+                    <img src="../../../assets/signoPregunta.jpg" alt="" class="cuadrado-desconocido"
+                        *ngIf="proy.titulo == 'Proximamente'">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="proyecto" *ngIf="proy != undefined">
+
+        <h1 style="margin-top: 5rem;"> {{proy.titulo}} </h1>
+
+        <div class="info">
+
+            <div class="select">
+                <div class="visitar" style="background-image: url({{proy.imagen}});">
+                    <a href="{{proy.vercel}}" target="_blank">Haga click para ir al sitio web</a>
+                </div>
+            </div>
+
+            <div class="proy-descripcion">
+                <h4> Objetivo </h4>
+                <label for=""> {{proy.objetivo}} </label>
+                <h4> Descripcion </h4>
+                <p>
+                    {{proy.proceso}}
+                </p>
+                <h4> Usuario para probar (Sin las comillas)</h4>
+                <p>
+                    {{proy.usuario}}
+                </p>
+                <h4> Rol : {{proy.rol}} </h4>
+            </div>
+
+        </div>
+
+        <button class="button" (click)="proy = undefined"> Volver </button>
+
+    </div>
+
+</div>

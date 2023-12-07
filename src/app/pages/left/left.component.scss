@@ -1,0 +1,47 @@
+.main {
+    margin: 0 auto;
+    height: 100vh;
+    background-image: url("../../../assets/laptop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.contenedor{
+    margin: 0 auto;
+    height: 80%;
+    width: 60%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: white;
+}
+
+.contenedor p{
+    margin-top: 1.4rem;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    height: 50%;
+    width: 70%;
+    line-height: 2;
+    font-size: larger;
+}
+
+.button{
+    position: absolute;
+    right: 0;
+    top: 37%;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-right: 1%;
+    height: 27%;
+    width: 3%;
+    font-size: larger;
+    color: white;
+    background-color: rgb(63, 2, 63);
+    border: none;
+    cursor: pointer;
+}

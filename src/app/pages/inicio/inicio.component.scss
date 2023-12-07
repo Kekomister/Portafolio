@@ -1,0 +1,100 @@
+//--------GENERAL---------------------//
+
+.main {
+    margin: 0 auto;
+    height: 100vh;
+    overflow: auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    display: grid;
+    grid-template-rows: 65% 35%;
+    font-weight:lighter;
+    font-size: large;
+    background-image: url("../../../assets/monitor.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pantalla {
+    text-align: center;
+    padding: 1rem;
+    align-self: center;
+    margin-top: 12rem;
+}
+
+.contenedor-pantallas-arriba {
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 2fr 1fr 2fr;
+    margin-bottom: 3rem;
+}
+
+//--------PANTALLA IZQUIERDA---------------------//
+
+.izquierda {
+    // X Y Z ANGLE
+    rotate: 0.5 50 -0.5 50deg;
+}
+
+.izquierda :hover{
+    cursor: pointer;
+}
+
+.acerca-extra {
+    display: flex;
+    flex-direction: column;
+    font-size: xx-large;
+}
+
+//--------PANTALLA MEDIO---------------------//
+
+.introduccion {
+    h1{
+        margin-bottom: 1rem;
+    }
+    h2{
+        margin-bottom: 1rem;
+    }
+}
+
+//--------PANTALLA DERECHA---------------------//
+
+.derecha{
+    rotate: 0.5 -50 0.5 50deg;
+}
+
+.derecha :hover{
+    cursor: pointer;
+}
+
+.cuadrados-proyectos {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+
+.cuadrado {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../../../assets/signoPregunta.jpg");
+    background-position: center;
+    background-size: contain;
+}
+
+//--------PANTALLA ABAJO---------------------//
+
+.abajo {
+    margin: 0 auto;
+    margin-bottom: 14rem;
+}
+
+.contactos {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
